@@ -1,0 +1,49 @@
+{
+  "name": "p5.js Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ritwickdey.liveserver",
+        "ms-vscode.live-server",
+        "formulahendry.auto-rename-tag",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+        "p5canvas.p5canvas"
+      ],
+      "settings": {
+        "liveServer.settings.port": 5500,
+        "liveServer.settings.CustomBrowser": "chrome",
+        "liveServer.settings.donotShowInfoMsg": true,
+        "liveServer.settings.donotVerifyTags": true,
+        "editor.formatOnSave": true
+      }
+    }
+  },
+
+  "forwardPorts": [5500, 3000, 8080],
+  "portsAttributes": {
+    "5500": {
+      "label": "Live Server",
+      "onAutoForward": "openPreview"
+    },
+    "3000": {
+      "label": "Development Server",
+      "onAutoForward": "openPreview"
+    }
+  },
+
+  "postCreateCommand": "npm install -g live-server http-server && npm install",
+  
+  "remoteUser": "node"
+}
