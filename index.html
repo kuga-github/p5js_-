@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Interactive Development</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        #canvas-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+        }
+        
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        button {
+            background-color: #ed225d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #d1214f;
+        }
+        
+        .info {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 p5.js Interactive Development Environment</h1>
+    
+    <div class="info">
+        <h3>Welcome to your p5.js Dev Container!</h3>
+        <p>This environment is set up for interactive p5.js development with:</p>
+        <ul>
+            <li>Live reload on file changes</li>
+            <li>VS Code extensions for enhanced development</li>
+            <li>Port forwarding for easy preview</li>
+            <li>p5.js and p5.sound libraries loaded</li>
+        </ul>
+        <p>Edit the <code>sketch.js</code> file to start coding!</p>
+    </div>
+    
+    <div id="canvas-container">
+        <!-- p5.js canvas will be inserted here -->
+    </div>
+    
+    <div class="controls">
+        <button onclick="saveCanvas('mySketch', 'png')">Save Canvas</button>
+        <button onclick="location.reload()">Reload Sketch</button>
+    </div>
+    
+    <script src="sketch.js"></script>
+</body>
+</html>

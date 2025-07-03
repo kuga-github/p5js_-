@@ -1,0 +1,78 @@
+/* Additional styles for p5.js projects */
+
+/* Smooth transitions for interactive elements */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #canvas-container {
+        padding: 10px;
+    }
+    
+    .info {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .info {
+        background-color: #2d2d2d;
+        color: #e0e0e0;
+    }
+    
+    h1 {
+        color: #e0e0e0;
+    }
+}
+
+/* Animation for buttons */
+button {
+    transform: scale(1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}

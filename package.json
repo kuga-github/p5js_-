@@ -1,0 +1,18 @@
+{
+  "name": "p5js-interactive-dev",
+  "version": "1.0.0",
+  "description": "Interactive p5.js development environment",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=5500 --host=0.0.0.0 --open=/index.html",
+    "dev": "live-server --port=5500 --host=0.0.0.0 --open=/index.html --watch=**/*.js,**/*.html,**/*.css",
+    "serve": "http-server -p 3000 -o"
+  },
+  "keywords": ["p5.js", "creative-coding", "interactive"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1"
+  }
+}
